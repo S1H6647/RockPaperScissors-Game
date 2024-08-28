@@ -7,9 +7,8 @@ Scissors = -1
 import random
 
 computer = random.choice([-1,0,1])
-round = int(input("Enter how many rounds you want to play: "))
-i = 1
-while (i<=round):
+
+while True:
     youString = input("Enter your choice: ")
     youDict = {
     "P":1,
@@ -47,4 +46,6 @@ while (i<=round):
             print("You Win!")
         elif(computer == -1 and You == 1):
             print("You Lose!")
-    i+=1
+    dec = int(input("Do you want to continue playing game?(1 or 0) "))
+    if(dec == 0):
+        break;
